@@ -7,6 +7,15 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+// GetAlldogs is a function to get all dogs data from database
+// @Summary Get all dogs
+// @Description Get all dogs
+// @Tags dogs
+// @Accept json
+// @Produce json
+// @Success 200 {object} ResponseHTTP{data=[]models.Dog}
+// @Failure 503 {object} ResponseHTTP{}
+// @Router /api/dogs [get]
 func GetDogs(c *fiber.Ctx) error {
 	var dogs []models.Dog
 
