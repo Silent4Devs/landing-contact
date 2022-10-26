@@ -15,6 +15,7 @@ func SetupRoutes(app *fiber.App) {
 
 	//Index endpoint
 	api.Post("/register", handlers.Register)
+	api.Post("/login", handlers.Login)
 	api.Get("/metrics", monitor.New(monitor.Config{Title: "Metrics"}))
 
 	//Dogs
