@@ -17,7 +17,6 @@ func main() {
 
 	//start fiber
 	app := fiber.New(config)
-
 	// Middlewares.
 	middlewares.Params(app)
 

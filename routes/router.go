@@ -9,11 +9,13 @@ import (
 
 func SetupRoutes(app *fiber.App) {
 
+	app.Get("/", handlers.Welcome)
 	// Middleware
 	api := app.Group("/api")
 
 	//Index endpoint
-	api.Get("/", handlers.Welcome)
+	api.Post("/register", handlers.Register)
+	api.Post("/login", handlers.Login)
 	api.Get("/metrics", monitor.New(monitor.Config{Title: "Metrics"}))
 
 	//Dogs

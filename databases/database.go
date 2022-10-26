@@ -39,7 +39,7 @@ func Connect() error {
 
 	Database.Logger = logger.Default.LogMode(logger.Info)
 
-	Database.AutoMigrate(&models.Dog{})
+	Database.AutoMigrate(&models.User{})
 
 	return nil
 }
