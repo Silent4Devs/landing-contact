@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"robot-monitoreo/handlers"
+	"fiber-boilerplate/handlers"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/monitor"
@@ -16,6 +16,10 @@ func SetupRoutes(app *fiber.App) {
 	//Index endpoint
 	api.Post("/register", handlers.Register)
 	api.Post("/login", handlers.Login)
+	api.Get("/authenticated", handlers.AuthenticatedUser)
+	api.Post("/logout", handlers.Logout)
+	api.Post("/forgot", handlers.Forgot)
+	api.Post("/reset", handlers.ResetPassword)
 	api.Get("/metrics", monitor.New(monitor.Config{Title: "Metrics"}))
 
 	//Dogs

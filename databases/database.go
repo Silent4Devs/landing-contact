@@ -1,8 +1,8 @@
 package databases
 
 import (
-	"robot-monitoreo/config"
-	"robot-monitoreo/models"
+	"fiber-boilerplate/config"
+	"fiber-boilerplate/models"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
@@ -39,7 +39,7 @@ func Connect() error {
 
 	Database.Logger = logger.Default.LogMode(logger.Info)
 
-	Database.AutoMigrate(&models.User{})
+	Database.AutoMigrate(&models.User{}, &models.PasswordReset{})
 
 	return nil
 }

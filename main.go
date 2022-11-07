@@ -1,12 +1,12 @@
 package main
 
 import (
+	"fiber-boilerplate/config"
+	"fiber-boilerplate/databases"
+	"fiber-boilerplate/middlewares"
+	"fiber-boilerplate/pkg/utils"
+	"fiber-boilerplate/routes"
 	"os"
-	"robot-monitoreo/config"
-	"robot-monitoreo/databases"
-	"robot-monitoreo/middlewares"
-	"robot-monitoreo/pkg/utils"
-	"robot-monitoreo/routes"
 
 	"github.com/gofiber/fiber/v2"
 )
