@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"robot-monitoreo/databases"
-	"robot-monitoreo/models"
+	"fiber-boilerplate/databases"
+	"fiber-boilerplate/models"
 
 	"github.com/gofiber/fiber/v2"
 )

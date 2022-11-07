@@ -10,7 +10,11 @@ import (
 func Params(a *fiber.App) {
 	a.Use(
 		// Add CORS to each route.
-		cors.New(),
+		cors.New(cors.Config{
+			//cookies passed in frontend
+			//this prevent browser blocking
+			AllowCredentials: true,
+		}),
 		// Add simple logger.
 		logger.New(),
 		//add recover option.
