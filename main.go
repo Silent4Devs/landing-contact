@@ -9,9 +9,11 @@ import (
 	"os"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/golang-module/carbon/v2"
 )
 
 func main() {
+	carbon.Now().ToDateTimeString()
 	// Define Fiber config.
 	config := config.FiberConfig()
 
