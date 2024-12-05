@@ -22,11 +22,11 @@ func SetupRoutes(app *fiber.App) {
 	api.Post("/reset", handlers.ResetPassword)
 	api.Get("/metrics", monitor.New(monitor.Config{Title: "Metrics"}))
 
-	//Dogs
-	api.Get("/dogs", handlers.GetDogs)
-	api.Get("/dogs/:id", handlers.GetDog)
-	api.Post("/dogs", handlers.AddDog)
-	api.Put("/dogs/:id", handlers.UpdateDog)
-	api.Delete("/dogs/:id", handlers.RemoveDog)
+	//Users
+	api.Get("/users", handlers.GetUsers)
+	api.Get("/users/:id", handlers.GetUser)
+	api.Post("/users", handlers.AddUser)
+	api.Put("/users/:id", handlers.UpdateUser)
+	api.Delete("/users/:id", handlers.RemoveUser)
 
 }
